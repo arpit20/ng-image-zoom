@@ -1,0 +1,35 @@
+.zoom-image{
+            
+            display: inline-block;
+            position: relative;
+            border: 1px solid;
+     
+        }
+        .zoom-type__adjacent{
+            /*width:640px;
+            height:400px;*/
+            overflow:hidden;
+            position:absolute;
+          
+        
+        
+        }
+        .zoom-type__overlay{
+          
+            overflow:hidden;
+            position:absolute;
+            top: 0;
+            left:0;
+            height: 100%;
+            width:100%;  
+        
+        }
+
+        .thumbnails{
+            float: left;
+            list-style-type: none;
+        }
+        .zoom-image__thumbnails{
+            float: left;
+            margin: 50px;
+        }

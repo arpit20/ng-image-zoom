@@ -1,0 +1,27 @@
+
+<div *ngIf="!thumbnailsFlag"> 
+ <div class="zoom-image" [attr.data-zoom-type]="zoomType" [attr.data-image-zoom]="imageZoom">
+                <a [href]="imageStandard">
+                    <img [src]="imageStandard" alt="">
+                </a>    
+                <!--<div class="zoom" style="width:640;height:360px;overflow:hidden;position:relative;"></div>-->
+ </div>
+</div> 
+
+<div *ngIf="thumbnailsFlag">
+   <ul class="thumbnails">
+      <li *ngFor= "let thumbnail of imageThumbnails" 
+        [attr.data-image-zoom]="thumbnail.zoomImage">
+        <a [href]="thumbnail.standardImage"> 
+            <img [src]="thumbnail.thumbnailImage">
+        </a>    
+      </li>
+   </ul>
+
+     <div class="zoom-image zoom-image__thumbnails" [attr.data-zoom-type]="zoomType" [attr.data-image-zoom]="imageThumbnails[0].zoomImage">
+                <a [href]="imageThumbnails[0].zoomImage">
+                    <img [src]="imageThumbnails[0].standardImage" alt="">
+                </a>    
+                <!--<div class="zoom" style="width:640;height:360px;overflow:hidden;position:relative;"></div>-->
+      </div>
+</div>   
